@@ -1,0 +1,9 @@
+routing:
+    controllers:
+        Acme.Controller.Xeon: Fluency\Acme\Controller\XeonController
+        Acme.Controller.Admin: Fluency\Acme\Controller\AdminController
+
+    routes:
+        - { name: _default, pattern:  /, controller: Acme.Controller.Xeon:homeAction, method: get }
+        - { name: _home, pattern:  /home, controller: Acme.Controller.Xeon:homeAction }
+        - { name: _login, pattern: /login, controller: Acme.Controller.Admin:loginAction}

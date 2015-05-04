@@ -1,0 +1,49 @@
+imports:
+    - { resource: config.yml }
+
+console:
+    name: Fluency\Silex
+    version: 1.0.0
+
+commands:
+    #Doctrine DBAL commands
+    dbal_run_sql:
+        class: Doctrine\DBAL\Tools\Console\Command\RunSqlCommand
+    dbal_import:
+        class: Doctrine\DBAL\Tools\Console\Command\ImportCommand
+    dbal_reserved_words:
+        class: Doctrine\DBAL\Tools\Console\Command\ReservedWordsCommand
+    dbal_database_create:
+        class: Fluency\Silex\Doctrine\DBAL\Tools\Console\Command\CreateDatabaseCommand
+    dbal_database_drop:
+        class: Fluency\Silex\Doctrine\DBAL\Tools\Console\Command\DropDatabaseCommand
+    dbal_schema_create:
+        class: Fluency\Silex\Doctrine\DBAL\Tools\Console\Command\CreateSchemaCommand
+    #Framework commands
+    ## Assets install
+    assets_install:
+        class: Fluency\Silex\Framework\Command\AssetsInstallCommand
+    #Hello Command for demo purposes
+    acme_hello:
+        class: Fluency\Acme\Command\HelloCommand
+
+service_providers:
+    console:
+        class: Fluency\Silex\Provider\ConsoleServiceProvider
+        construct_parameters: ~
+        parameters:
+            console.name: Fluency\Silex
+            console.version: 1.0.0
+
+    event_dispatcher:
+        class: Fluency\Silex\Provider\EventDispatcherServiceProvider
+        construct_parameters: ~
+        parameters: ~
+
+    monolog:
+        parameters:
+            monolog.logfile: %log_path%/console.log
+            monolog.name: CONSOLE
+
+    filesystem:
+        class: Fluency\Silex\Provider\FileSystemServiceProvider

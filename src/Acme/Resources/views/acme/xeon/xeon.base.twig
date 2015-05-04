@@ -1,0 +1,42 @@
+{% extends "bootstrap.base.twig" %}
+
+{% block pagetitle %}Xeon | OnePage Responsive Theme{% endblock %}
+
+{% block htmlhead %}
+    <link href="{{ asset('assets/acme/css/prettyPhoto.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/acme/css/main.css') }}" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ asset('assets/acme/images/ico/favicon.ico') }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="{{ asset('assets/acme/images/ico/apple-touch-icon-144-precomposed.png') }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="{{ asset('assets/acme/images/ico/apple-touch-icon-114-precomposed.png') }}" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="{{ asset('assets/acme/images/ico/apple-touch-icon-72-precomposed.png') }}" />
+    <link rel="apple-touch-icon-precomposed"
+          href="{{ asset('assets/acme/images/ico/apple-touch-icon-57-precomposed.png') }}" />
+{% endblock %}
+
+{% block body_properties %}data-spy="scroll" data-target="#navbar" data-offset="0"{% endblock %}
+
+{% block header %}
+    {% include "acme/xeon/header.inc.twig" %}
+{% endblock %}
+
+{% block content %}
+    {% include "acme/xeon/sections/main-slider.inc.twig" %}
+    {% include "acme/xeon/sections/services.inc.twig" %}
+    {% include "acme/xeon/sections/portfolio.inc.twig" %}
+    {% include "acme/xeon/sections/pricing.inc.twig" %}
+    {% include "acme/xeon/sections/about-us.inc.twig" %}
+    {% include "acme/xeon/sections/contact.inc.twig" %}
+{% endblock %}
+
+{% block footer %}
+    {% include "acme/xeon/footer.inc.twig" %}
+{% endblock %}
+
+{% block htmlfoot %}
+    <script src="{{ asset('assets/acme/js/jquery.isotope.min.js') }}"></script>
+    <script src="{{ asset('assets/acme/js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ asset('assets/acme/js/main.js') }}"></script>
+{% endblock %}

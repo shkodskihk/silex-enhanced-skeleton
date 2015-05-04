@@ -1,0 +1,32 @@
+service_providers:
+    security:
+        class: Silex\Provider\SecurityServiceProvider
+        parameters:
+#            security.role_hierarchy:
+#                - ROLE_ADMIN [ 'ROLE_USER' ]
+#            security.access_rules:
+#                - [ '^/login$', 'IS_AUTHENTICATED_ANONYMOUSLY' ]
+#                - [ '^/.+$', 'ROLE_USER' ]
+            security.firewalls:
+                default:
+                    pattern:   ^/.*$
+                    anonymous: true
+                    form:
+                        login_path: /login
+                        check_path: /login_check
+                        default_target_path: /
+                        always_use_default_target_path': true
+                    logout:
+                        logout_path:        /logout
+                        invalidate_session: false
+                        target: /
+                        invalidate_session: true
+#                    users:
+#                        admin:
+#                            - ROLE_ADMIN
+#                            - 5FZ2Z8QIkA7UTZ4BYkoC+GsReLf569mSKDsfods6LYQ8t+a8EW9oaircfMpmaLbPBh4FOBiiFyLfuZmTSUwzZg==
+
+    security.user_providers:
+        class: Fluency\Silex\Security\Core\Authentication\Provider\DbalUserProvider
+        parameters:
+            security.user_providers.connection: ~

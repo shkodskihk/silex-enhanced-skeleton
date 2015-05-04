@@ -1,0 +1,42 @@
+service_providers:
+    monolog:
+        class: Silex\Provider\MonologServiceProvider
+        construct_parameters: ~
+        parameters:
+            monolog.logfile: %log_path%/common.log
+            monolog.name: COMMON
+
+    translation:
+        class: Silex\Provider\TranslationServiceProvider
+        parameters:
+            locale_fallbacks: [en, es]
+            locale: es
+
+    doctrine:
+        class: Silex\Provider\DoctrineServiceProvider
+        construct_parameters: ~
+        parameters:
+            dbs.options:
+                default:
+                    driver: %driver%
+                    path: %dbpath%/%dbname%.db
+                    charset: %charset%
+                    dbname: %dbname%
+                    user: %user%
+                    password: %password%
+                    port: %port%
+
+assets:
+    default_base_dir: %base_path%/src
+    public_path: Resources/public
+    resources_path:
+        - Acme
+
+# Schema creation config
+dbal_schema:
+    default: #connection alias
+        security: Fluency\Silex\Security\Core\Dbal\SecuritySchema #schema class
+        ## A valid config too
+#        tables:
+#            security_users: Fluency\Silex\Security\Core\Dbal\UserTable
+#            security_roles: Fluency\Silex\Security\Core\Dbal\RoleTable

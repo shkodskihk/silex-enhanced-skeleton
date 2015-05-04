@@ -1,0 +1,41 @@
+imports:
+    - { resource: config.yml }
+
+service_providers:
+    monolog:
+        parameters:
+            monolog.logfile: %log_path%/application.log
+            monolog.name: APPLICATION
+
+    service_controller:
+        class: Silex\Provider\ServiceControllerServiceProvider
+
+    twig:
+        class: Silex\Provider\TwigServiceProvider
+        construct_parameters: ~
+        parameters:
+            twig.path:
+                #Global views
+                - %base_path%/app/Resources/views
+                #Demo views
+                - %base_path%/src/Acme/Resources/views
+            twig.options:
+                cache: %cache_path%/twig
+                strict_variables: false
+                auto_reload: true
+
+    http_cache:
+        class: Silex\Provider\HttpCacheServiceProvider
+        parameters:
+            http_cache.cache_dir: %cache_path%/http
+            http_cache.esi: ~
+
+    url_generator:
+        class: Silex\Provider\UrlGeneratorServiceProvider
+
+    form:
+        class: Silex\Provider\FormServiceProvider
+
+    session:
+        class: Silex\Provider\SessionServiceProvider
+

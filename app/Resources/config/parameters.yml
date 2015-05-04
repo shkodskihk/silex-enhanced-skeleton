@@ -1,0 +1,14 @@
+parameters:
+    debug: false
+    log_level:  DEBUG
+    timezone: America/Havana
+    # Database parameters
+    driver: pdo_mysql
+    dbpath: app/Resources/db
+    dbname: acme
+    charset: utf8
+    ## Only relevant for pdo_mysql, pdo_pgsql, and pdo_oci/oci8 drivers
+    host: localhost
+    port: 3306
+    user: root
+    password: admin123
