@@ -49,10 +49,6 @@
     },
     "repositories": [
         {
-            "type": "composer",
-            "url": "http://satis.fluency.com"
-        },
-        {
             "type": "package",
             "package": {
                 "name": "afarkas/html5shiv",
