@@ -1,5 +1,9 @@
 services:
     userModel:
         class: Fluency\Silex\Security\Model\UserModel
+        ## All parameters are optionals and class must have properly camel case
+        ## set method for each parameter
         parameters:
-            connection: "db" #"['dbs']['default']"
+            connection: "db"
+            ## Multi-level access
+#            connection: "['dbs']['default']"
