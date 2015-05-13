@@ -28,7 +28,7 @@ $app->register(
     ),
     array(
         'config.dir' => BASEPATH . '/app/Resources/config',
-        'config.files' => array('console.yml'),
+        'config.files' => array('console.yml', 'services.yml'),
     )
 );
 
