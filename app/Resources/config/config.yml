@@ -25,6 +25,10 @@ service_providers:
                     user: %user%
                     password: %password%
                     port: %port%
+    services:
+        class: Fluency\Silex\Provider\ServiceProvider
+        construct_parameters: ~
+        parameters: ~
 
 assets:
     default_base_dir: %base_path%/src

@@ -1,0 +1,5 @@
+services:
+    userModel:
+        class: Fluency\Silex\Security\Model\UserModel
+        parameters:
+            connection: "db" #"['dbs']['default']"
