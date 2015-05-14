@@ -19,7 +19,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.3.3",
-        "fluency/silex-enhanced": "~0.7",
+        "fluency/silex-enhanced": "~1.0",
         "leafo/lessphp": "~0.4.0",
         "leafo/scssphp" : "~0.1",
         "components/jquery":  "~2.0",
