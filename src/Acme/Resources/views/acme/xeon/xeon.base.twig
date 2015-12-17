@@ -3,7 +3,7 @@
 {% block pagetitle %}Xeon | OnePage Responsive Theme{% endblock %}
 
 {% block htmlhead %}
-    <link href="{{ asset('assets/acme/css/prettyPhoto.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/vendor/jquery-prettyPhoto/css/prettyPhoto.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/acme/css/main.css') }}" rel="stylesheet" />
     <link rel="shortcut icon" href="{{ asset('assets/acme/images/ico/favicon.ico') }}" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144"
@@ -36,7 +36,7 @@
 {% endblock %}
 
 {% block htmlfoot %}
-    <script src="{{ asset('assets/acme/js/jquery.isotope.min.js') }}"></script>
-    <script src="{{ asset('assets/acme/js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ asset('assets/vendor/isotope/jquery.isotope.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery-prettyPhoto/js/jquery.prettyPhoto.js') }}"></script>
     <script src="{{ asset('assets/acme/js/main.js') }}"></script>
 {% endblock %}

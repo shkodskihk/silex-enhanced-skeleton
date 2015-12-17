@@ -8,7 +8,7 @@
     "authors": [
         {
             "name": "Rafael Ernesto Espinosa Santiesteban",
-            "email": "ralphlnx@gmail.com"
+            "email": "rernesto@fluency.com"
         }
     ],
     "autoload" : {
@@ -20,14 +20,9 @@
     "require": {
         "php": ">=5.3.3",
         "fluency/silex-enhanced": "~0.7",
+        "fluency/obfuscator": "~0.8",
         "leafo/lessphp": "~0.4.0",
-        "leafo/scssphp" : "~0.1",
-        "components/jquery":  "~2.0",
-        "components/font-awesome": "~4.0",
-        "components/bootstrap": "~3.2",
-        "components/bootstrap-default": "~3.2",
-        "afarkas/html5shiv": "~3.7",
-        "scottjehl/respond": "~1.4"
+        "leafo/scssphp" : "~0.1"
     },
     "require-dev":{
         "phpunit/phpunit": "~4.5",
@@ -46,61 +41,5 @@
         "web-dir": "web",
         "var-dir": "var",
         "assets-install": "symlink"
-    },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "afarkas/html5shiv",
-                "type": "component",
-                "version": "3.7.2",
-                "dist": {
-                    "url": "https://github.com/aFarkas/html5shiv/archive/3.7.2.zip",
-                    "type": "zip"
-                },
-                "source": {
-                    "url": "https://github.com/aFarkas/html5shiv.git",
-                    "type": "git",
-                    "reference": "3.7.2"
-                },
-                "extra": {
-                    "component": {
-                        "scripts": [
-                            "dist/html5shiv.js"
-                        ]
-                    }
-                },
-                "require": {
-                    "robloach/component-installer": "*"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "scottjehl/respond",
-                "type": "component",
-                "version": "1.4.2",
-                "dist": {
-                    "url": "https://github.com/scottjehl/Respond/archive/1.4.2.zip",
-                    "type": "zip"
-                },
-                "source": {
-                    "url": "https://github.com/scottjehl/Respond.git",
-                    "type": "git",
-                    "reference": "1.4.2"
-                },
-                "extra": {
-                    "component": {
-                        "scripts": [
-                            "src/respond.js"
-                        ]
-                    }
-                },
-                "require": {
-                    "robloach/component-installer": "*"
-                }
-            }
-        }
-    ]
+    }
 }

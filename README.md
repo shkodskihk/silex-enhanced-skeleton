@@ -15,10 +15,11 @@ replacement.
 - [PHP](http://php.net) version >5.4
 - Apache2 web server or similar
 - Composer
+- Bower
 ### Deploying
 
 1. Clone [Silex Enhanced](https://github.com/alvk4r/silex-enhanced) project with git.
-2. Run `composer update`.
+2. Run `composer update` and `bower update`.
 3. Run `php bin/console assets:install` command from console.
 4. Configure your web server, create a virtual host with `path/to/project/web` as
 document root.
